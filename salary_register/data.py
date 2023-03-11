@@ -21,7 +21,7 @@ def register(current_month: str, employee: Employee) -> pd.DataFrame:
         "Sunday and Holidays overtime hours": employee.overtime2_hours[current_month],
         "Overtime salary from Sunday and Holidays": employee.overtime2_salary[current_month],
         "Sunday and Holidays overtime rate": employee.overtime2_rate[current_month],
-        "Bonuses": "No" if employee.bonuses[current_month] else "Yes",
+        "Bonuses": "Yes" if employee.bonuses[current_month] else "No",
         "Bonuses values": employee.bonuses_value[current_month] if employee.bonuses[current_month] else 0.0
     }
     return pd.DataFrame([employee_data])
