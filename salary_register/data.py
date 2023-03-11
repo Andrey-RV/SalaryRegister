@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def register(current_month: str, employee: Employee) -> pd.DataFrame:
-    """_summary_
+    """_Creates a DataFrame with the employee's data for the current month._
 
     Args:
         current_month (str): _A string with the current month._
