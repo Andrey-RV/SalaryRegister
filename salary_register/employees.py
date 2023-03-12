@@ -102,7 +102,7 @@ class Employee:
             base_salary_will_be_changed = 'Y'
         else:
             base_salary_will_be_changed = input('Do you want to change the current base salary of' +
-                                            f' {self.salary.get(previous_month)}? "Y" or "N": ')
+                                                f' {self.salary.get(previous_month)}? "Y" or "N": ')
 
         while base_salary_will_be_changed.upper() not in ("Y", "N"):
             base_salary_will_be_changed = input('Please, insert "Y" or "N": ')
