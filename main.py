@@ -1,7 +1,8 @@
+import pandas as pd
 from os import system
-from salary_register.employees import *
-from salary_register.utils import *
-from salary_register.data import *
+from salary_register.employees import Employee, MONTHS
+from salary_register.utils import get_employee_name, get_month_choice, data_to_xlsx
+from salary_register.data import register
 
 
 def main():
@@ -33,9 +34,9 @@ def main():
                 if employee.got_custom_overtime_rate():
                     employee.change_overtime_rate(month)
                 employee.register_overtime_salary(month)
-            
+
             employees_data.append(register(current_month=month, employee=employee))
-            
+
         data_to_xlsx(current_month=month, employees_data=employees_data)
 
 
