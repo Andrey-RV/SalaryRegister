@@ -48,13 +48,13 @@ def data_to_xlsx(current_month: str, employees_data: MutableSequence[pd.DataFram
     file_name = 'salary_register.xlsx'
 
     if employees_data:
-        data = pd.concat(employees_data, ignore_index=True) # type: ignore
+        data = pd.concat(employees_data, ignore_index=True)  # type: ignore
     else:
         data = pd.DataFrame()
-    
+
     if os.path.isfile(file_name):
         with pd.ExcelWriter(file_name, mode='a') as writer:
-            data.to_excel(writer, sheet_name=current_month, index=False) # type: ignore
+            data.to_excel(writer, sheet_name=current_month, index=False)  # type: ignore
     else:
         with pd.ExcelWriter(file_name, mode='w') as writer:
-            data.to_excel(writer, sheet_name=current_month, index=False) # type: ignore 
+            data.to_excel(writer, sheet_name=current_month, index=False)  # type: ignore
