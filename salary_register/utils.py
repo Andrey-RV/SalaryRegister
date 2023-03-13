@@ -4,7 +4,7 @@ from typing import MutableSequence
 
 
 def get_employee_name(employee_number: int) -> str:
-    """_Handles the input of the employee name.
+    """_Handles the input of the employee name_.
 
     Args:
         employee_number (int): _A number that represents the current employee._
@@ -19,7 +19,7 @@ def get_employee_name(employee_number: int) -> str:
 
 
 def get_month_choice(current_month: str) -> bool:
-    """_Handles the input of the month choice and checks if the user wants to register the salaries of the current month.
+    """_Handles the input of the month choice and checks if the user wants to register the salaries of the current month_.
 
     Args:
         current_month (str): _A string with the current month._
