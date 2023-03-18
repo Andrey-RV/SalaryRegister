@@ -5,8 +5,8 @@ This Python project is a prototype of a salary register script that runs in the 
 The salary calculation assumes that payment is made on a monthly basis rather than an hourly wage, and that employees work 220 hours per month.
 
 ## Requirements
- -   Python 3.10 to avoid errors about the use of the new type union operators | (PEP 604).
- -   Pandas;
+-   Python 3.10 to avoid errors about the use of the new type union operators | (PEP 604).
+-   Pandas;
 
 You can run the following command to install the required packages:
 ```
