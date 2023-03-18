@@ -6,6 +6,11 @@ MONTHS = ("January", "February", "March", "April", "May", "June", "July", "Augus
 
 class Employee:
     def __init__(self, name: str) -> None:
+        """Initialize an employee object.
+
+        Args:
+            name (str): The employee's name.
+        """
         self.name = name
         self.salary: dict[str, float] = {}
         self.bonuses: dict[str, float] = {}
@@ -176,7 +181,7 @@ class Employee:
         """
         overtime_rate_will_be_changed = input('By default, the overtime rate is 50% for weekdays and 100% for weekends and holidays.' +
                                               ' Do you want to change it? "Y" or "N": ')
-        
+
         while overtime_rate_will_be_changed.upper() not in ("Y", "N"):
             overtime_rate_will_be_changed = input('Please, insert "Y" or "N": ')
 
