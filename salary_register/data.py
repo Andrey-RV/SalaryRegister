@@ -3,14 +3,14 @@ import pandas as pd
 
 
 def register(current_month: str, employee: Employee) -> pd.DataFrame:
-    """_Creates a DataFrame with the employee's data for the current month._
+    """Create a DataFrame with the employee's data for the current month.
 
     Args:
-        current_month (str): _A string with the current month._
-        employee (Employee): _An employee object._
+        current_month (str): A string with the current month.
+        employee (Employee): An employee object.
 
     Returns:
-        pd.DataFrame: _A DataFrame with the employee's data for the current month._
+        pd.DataFrame: A DataFrame with the employee's data for the current month.
     """
     employee_data: dict[str, str | float] = {
         "Name": employee.name,

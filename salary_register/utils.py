@@ -4,28 +4,30 @@ from typing import MutableSequence
 
 
 def get_employee_name(employee_number: int) -> str:
-    """_Handles the input of the employee name_.
+    """Handle the input of the employee name.
 
     Args:
-        employee_number (int): _A number that represents the current employee._
+        employee_number (int): A number that represents the current employee.
 
     Returns:
-        str: _Returns the employee name._
+        str: Returns the employee name.
     """
     employee_name = input(f"Enter the name of the employee {employee_number + 1}: ")
+
     while employee_name[0] == '-' or employee_name.isdigit() or len(employee_name) < 1:
         employee_name = input("Invalid input. Please insert a real name (not numbers or only one letter): ")
+
     return employee_name
 
 
 def get_month_choice(current_month: str) -> bool:
-    """_Handles the input of the month choice and checks if the user wants to register the salaries of the current month_.
+    """Handle the input of the month choice and checks if the user wants to register the salaries of the current month.
 
     Args:
-        current_month (str): _A string with the current month._
+        current_month (str): A string with the current month.
 
     Returns:
-        bool: _Wether the user wants to register the salaries of the current month or not._
+        bool: Wether the user wants to register the salaries of the current month or not.
     """
     will_resister_current_month = input(f"\nDo you want to register the salaries of {current_month}? (Y/N): ")
 
@@ -39,11 +41,11 @@ def get_month_choice(current_month: str) -> bool:
 
 
 def data_to_xlsx(current_month: str, employees_data: MutableSequence[pd.DataFrame]) -> None:
-    """_Saves the data to an excel file. Every month's data is saved in a different sheet of the same file._
+    """Save the data to an excel file. Every month's data is saved in a different sheet of the same file.
 
     Args:
-        current_month (str): _A string with the current month._
-        employees_data (MutableSequence[pd.DataFrame]): _A sequence with data of the employees. Every employee's data must be a DataFrame._
+        current_month (str): A string with the current month.
+        employees_data (MutableSequence[pd.DataFrame]): A sequence with data of the employees. Every employee's data must be a DataFrame.
     """
     file_name = 'salary_register.xlsx'
 
