@@ -8,6 +8,13 @@ The salary calculation assumes that payment is made on a monthly basis rather th
  -   Python 3.10 to avoid errors about the use of the new type union operators | (PEP 604).
  -   Pandas;
 
+You can run the following command to install the required packages:
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
 To begin using the project, clone or download this repository, and run 
 
 ```
